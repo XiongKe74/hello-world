@@ -1,0 +1,55 @@
+<html>
+<head>
+<link href="site.css" rel="stylesheet" />
+<script src="Calculator.js"></script>
+<title> JavaScript Calculator </title>
+</head>
+<body>
+
+        <form class="calcForm" id="calculator">
+            <input type="text" class="calcDisplay" id="display" />
+	    <div class="calcRow">
+                <input type="button" class="opButton" value="MC" onclick="memClear()" />
+                <input type="button" class="opButton" value="M+" onclick="memOp('add')" />
+                <input type="button" class="opButton" value="M-" onclick="memOp('subtract')" />
+                <input type="button" class="opButton" value="MR" onclick="memDisplay()" />
+            </div>
+	    <div class="calcRow">
+                <input type="button" class="opButton" value="MS" onclick="memStore()" />
+                <input type="button" class="opButton" value="1/x" onclick="inverse()" />
+                <input type="button" class="opButton" value="x!" onclick="factorial()" />
+                <input type="button" class="opButton" value="x^2" onclick="square()" />
+            </div>
+	    <div class="calcRow">
+                <input type="button" class="opButton" id="clearButton" value="C" onclick="clearDisplay()" />
+		<input type="button" class="opButton" value="x^y" onclick="setOperation('power')" />
+                <input type="button" class="opButton" value="+/-" onclick="changeSign()" />
+                <input type="button" class="opButton" value="/" onclick="setOperation('divide')" />
+            </div>
+            <div class="calcRow">
+                <input type="button" class="calcButton" value="7" onclick="numInput('7')" />
+                <input type="button" class="calcButton" value="8" onclick="numInput('8')" />
+                <input type="button" class="calcButton" value="9" onclick="numInput('9')" />
+                <input type="button" class="opButton" value="x" onclick="setOperation('multiply')" />
+            </div>
+            <div class="calcRow">
+                <input type="button" class="calcButton" value="4" onclick="numInput('4')" />
+                <input type="button" class="calcButton" value="5" onclick="numInput('5')" />
+                <input type="button" class="calcButton" value="6" onclick="numInput('6')" />
+                <input type="button" class="opButton" value="+" onclick="setOperation('add')" />
+            </div>
+            <div class="calcRow">
+                <input type="button" class="calcButton" value="1" onclick="numInput('1')" />
+                <input type="button" class="calcButton" value="2" onclick="numInput('2')" />
+                <input type="button" class="calcButton" value="3" onclick="numInput('3')" />
+                <input type="button" class="opButton" value="-" onclick="setOperation('subtract')" />
+            </div>
+            <div class="calcRow">
+                <input type="button" class="zeroButton" value="0" onclick="numInput('0')" />
+                <input type="button" class="calcButton" value="." onclick="insertDecimal()" />
+                <input type="button" class="equalButton" value="=" onclick="calculate()" />
+            </div>
+        </form>
+
+</body>
+</html>
